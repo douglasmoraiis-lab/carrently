@@ -1,4 +1,3 @@
-// src/App.tsx
 import React from "react";
 import HeroSplitScreen from "../components/Header";
 import BookingForm from "../components/BookingForm";
@@ -11,7 +10,6 @@ const HomePage: React.FC = () => {
         <BookingForm />
  
 
-      {/* O resto do conteúdo da sua página viria aqui */}
       <div className="h-96"></div>
     </div>
   );

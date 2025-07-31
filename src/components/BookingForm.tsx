@@ -1,13 +1,8 @@
-// src/components/BookingForm.tsx
-
 import React from 'react';
-// Importe os ícones diretamente da biblioteca Heroicons
 import { MapPinIcon, CalendarDaysIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 
-// O componente interno para cada campo do formulário
 const FormField: React.FC<{ icon: React.ReactNode; label: string }> = ({ icon, label }) => (
   <div className="flex items-center gap-3 cursor-pointer">
-    {/* O ícone será passado como prop */}
     {icon}
     <div className="flex items-center gap-2">
       <span className="text-gray-700 font-medium">{label}</span>
@@ -22,7 +17,6 @@ const BookingForm: React.FC = () => {
       <div className="bg-white p-5 rounded-2xl shadow-xl flex items-center justify-between space-x-4">
         
         <div className="flex-1">
-          {/* Passe o ícone importado, definindo o estilo com className */}
           <FormField 
             icon={<MapPinIcon className="h-6 w-6 text-gray-500" />} 
             label="Choose a location" 

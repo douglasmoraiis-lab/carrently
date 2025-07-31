@@ -1,7 +1,6 @@
 // src/components/Icons.tsx
 import React from 'react';
 
-// Props para controlar o estilo dos ícones
 interface IconProps {
   className?: string;
 }

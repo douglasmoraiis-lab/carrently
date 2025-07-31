@@ -1,11 +1,8 @@
-// src/components/HeroSplitScreen.tsx
 import React from 'react';
 import Button from './Button';
-// CORREÇÃO: O caminho da importação foi ajustado para corresponder ao nome do arquivo do componente.
 import Navigation from './Navbar'; 
 import carImage from '../assets/carImagem.jpg';
 
-// O logo pode ser um componente simples ou estar diretamente aqui
 const Logo: React.FC = () => (
   <div className="absolute top-8 left-16 text-2xl font-bold text-gray-800 cursor-pointer">
     car<span className="text-red-600">Rentify</span>
@@ -15,9 +12,7 @@ const Logo: React.FC = () => (
 
 const HeroSplitScreen: React.FC = () => {
   return (
-    // Recomendo definir uma altura específica (como 90vh) em vez de 100vh para acomodar melhor o formulário de reserva abaixo
     <div className="flex h-[90vh] w-full font-sans bg-white">
-      {/* ===== PAINEL ESQUERDO ===== */}
       <div className="relative flex w-1/2 flex-col justify-center bg-gray-100 p-16">
         <Logo />
         <div className="max-w-md">
@@ -36,17 +31,14 @@ const HeroSplitScreen: React.FC = () => {
         </div>
       </div>
 
-      {/* ===== PAINEL DIREITO ===== */}
       <div className="relative w-1/2 bg-[#E0E0E0] overflow-hidden">
         <Navigation />
         
-        {/* Efeito de Rastro de Movimento */}
         <div 
           className="absolute bottom-[100%] left-[-30%] h-[120px] w-[120%] bg-gradient-to-r from-blue-400/40 via-blue-500/20 to-transparent z-10 opacity-70"
           style={{ filter: 'blur(25px)' }}
         ></div>
         
-        {/* Imagem do Carro */}
         <img
           src={carImage}
           alt="Blue car in motion"
