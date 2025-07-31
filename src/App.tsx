@@ -1,7 +1,6 @@
-// src/App.tsx
 import React from 'react';
 import Header from './components/Header';
-import './index.css'; // Certifique-se de que o Tailwind CSS está configurado
+import './index.css'; // C
 import BookingForm from './components/BookingForm';
 
 const App: React.FC = () => {
