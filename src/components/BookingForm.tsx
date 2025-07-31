@@ -1,7 +1,16 @@
-import React from 'react';
-import { MapPinIcon, CalendarDaysIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
+import React from "react";
+import {
+  MapPinIcon,
+  CalendarDaysIcon,
+  ChevronDownIcon,
+} from "@heroicons/react/24/outline";
 
-const FormField: React.FC<{ icon: React.ReactNode; label: string }> = ({ icon, label }) => (
+interface FormFieldProps {
+  icon: React.ReactNode;
+  label: string;
+}
+
+const FormField: React.FC<FormFieldProps> = ({ icon, label }) => (
   <div className="flex items-center gap-3 cursor-pointer">
     {icon}
     <div className="flex items-center gap-2">
@@ -13,31 +22,30 @@ const FormField: React.FC<{ icon: React.ReactNode; label: string }> = ({ icon, l
 
 const BookingForm: React.FC = () => {
   return (
-    <div className="relative w-full max-w-5xl mx-auto mt-44 z-30">
-      <div className="bg-white p-5 rounded-2xl shadow-xl flex items-center justify-between space-x-4">
-        
-        <div className="flex-1">
-          <FormField 
-            icon={<MapPinIcon className="h-6 w-6 text-gray-500" />} 
-            label="Choose a location" 
+    <div className="w-full max-w-5xl mx-auto z-9999 top-0 -translate-y-1/2  -mb-44">
+      <div className="bg-white p-6 rounded-2xl shadow-xl flex items-center justify-between gap-6">
+        <div className="flex">
+          <FormField
+            icon={<MapPinIcon className="h-8 w-6 text-gray-500" />}
+            label="Choose a location"
           />
         </div>
 
         <div className="h-8 w-px bg-gray-200"></div>
 
         <div className="flex-1">
-          <FormField 
-            icon={<CalendarDaysIcon className="h-6 w-6 text-gray-500" />} 
-            label="Pickup Date" 
+          <FormField
+            icon={<CalendarDaysIcon className="h-6 w-6 text-gray-500" />}
+            label="Pickup Date"
           />
         </div>
 
         <div className="h-8 w-px bg-gray-200"></div>
 
         <div className="flex-1">
-          <FormField 
-            icon={<CalendarDaysIcon className="h-6 w-6 text-gray-500" />} 
-            label="Return Date" 
+          <FormField
+            icon={<CalendarDaysIcon className="h-6 w-6 text-gray-500" />}
+            label="Return Date"
           />
         </div>
 

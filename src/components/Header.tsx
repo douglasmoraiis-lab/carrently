@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './Button';
 import Navigation from './Navbar'; 
-import carImage from '../assets/carImagem.jpg';
+import carImage from '../assets/blue-car-speed 1.jpg';
 
 const Logo: React.FC = () => (
   <div className="absolute top-8 left-16 text-2xl font-bold text-gray-800 cursor-pointer">
@@ -12,7 +12,7 @@ const Logo: React.FC = () => (
 
 const HeroSplitScreen: React.FC = () => {
   return (
-    <div className="flex h-[90vh] w-full font-sans bg-white">
+    <div className="flex h-[90vh] w-full font-sans bg-gray-500">
       <div className="relative flex w-1/2 flex-col justify-center bg-gray-100 p-16">
         <Logo />
         <div className="max-w-md">
@@ -42,7 +42,7 @@ const HeroSplitScreen: React.FC = () => {
         <img
           src={carImage}
           alt="Blue car in motion"
-          className="absolute bottom-0 right-[-10%] w-[110%] max-w-none z-20" 
+          className="absolute bottom-0 right-[-10%] w-[110%] max-w-none"
         />
       </div>
     </div>
