@@ -1,30 +1,58 @@
-import React from 'react';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-const Navigation: React.FC = () => (
-  <nav className="absolute top-0 right-0 py-8 px-16 z-30">
-    <ul className="flex items-center space-x-8 text-gray-600 font-medium text-sm">
-      <li>
-        <a href="#home" className="border-b-2 border-red-600 pb-1 text-gray-900 font-semibold">
-          Home
-        </a>
-      </li>
-      <li>
-        <a href="#rent" className="hover:text-red-600 transition-colors">
-          Rent Details
-        </a>
-      </li>
-      <li>
-        <a href="#why-us" className="hover:text-red-600 transition-colors">
-          Why Choose Us
-        </a>
-      </li>
-      <li>
-        <a href="#register" className="hover:text-red-600 transition-colors">
-          Register
-        </a>
-      </li>
-    </ul>
-  </nav>
-);
+const Navigation: React.FC = () => {
+  const linkClasses =
+    "transition-colors hover:text-black pb-1 border-b-2 border-transparent hover:border-red-600 hover:border-b-2 hover:border-red-500 text-gray-600 font-medium";
+
+  const activeClasses = "text-gray-900 font-semibold hover:border-red-600";
+
+  return (
+    <nav className="absolute top-0 right-0 py-8 px-16 z-30">
+      <ul className="flex items-center space-x-8 text-gray-600 font-medium text-sm">
+        <li>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? `${linkClasses} ${activeClasses}` : linkClasses
+            }
+          >
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/best"
+            className={({ isActive }) =>
+              isActive ? `${linkClasses} ${activeClasses}` : linkClasses
+            }
+          >
+            Rent Details
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/why-us"
+            className={({ isActive }) =>
+              isActive ? `${linkClasses} ${activeClasses}` : linkClasses
+            }
+          >
+            Why Choose Us
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/register"
+            className={({ isActive }) =>
+              isActive ? `${linkClasses} ${activeClasses}` : linkClasses
+            }
+          >
+            Register
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
 export default Navigation;

@@ -1,10 +1,19 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+/* trunk-ignore-all(prettier) */
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import App from "./App";
+import BestService from "./pages/Best";
+import WhyChooseUs from "./pages/WhyUs";
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+const root = document.getElementById("root")!;
+
+ReactDOM.createRoot(root).render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/best" element={<BestService />} />
+      <Route path="/why-us" element={<WhyChooseUs />} />
+      {/* <Route path="/register" element={<Register />} /> */}
+    </Routes>
+  </BrowserRouter>
+);
