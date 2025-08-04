@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import BestService from "./pages/Best";
 import WhyChooseUs from "./pages/WhyUs";
+import Register from "./pages/Register";
 
 const root = document.getElementById("root")!;
 
@@ -13,7 +14,7 @@ ReactDOM.createRoot(root).render(
       <Route path="/" element={<App />} />
       <Route path="/best" element={<BestService />} />
       <Route path="/why-us" element={<WhyChooseUs />} />
-      {/* <Route path="/register" element={<Register />} /> */}
+      <Route path="/register" element={<Register />} />
     </Routes>
   </BrowserRouter>
 );

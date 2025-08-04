@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
-import './index.css'; // C
+/* trunk-ignore(git-diff-check/error) */
+import './index.css';
 import BookingForm from './components/BookingForm';
 import Footer from './components/footer';
 import Carousel from './components/carousel';

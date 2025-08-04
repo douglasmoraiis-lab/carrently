@@ -7,13 +7,10 @@ const Footer: React.FC = () => {
       className="h-90 text-black py-6 -mt-14 relative"
     >
       <div className="container mx-auto flex justify-start gap-20 mt-10">
-        {/* Titulo */}
         <div className="text-2xl font-bold ml-10">
           car<span className="text-red-600">Rentify</span>
           <div className="h-0.5 w-8 bg-red-600 mt-1"></div>
         </div>
-
-        {/* Company */}
         <ul className="flex flex-col items-start space-y-4">
           <h1 className="text-lg font-semibold text-black">Company</h1>
           <li className="text-gray-600 font-medium text-sm">Rent Details</li>
@@ -23,8 +20,6 @@ const Footer: React.FC = () => {
             Terms and Conditions
           </li>
         </ul>
-
-        {/* Features */}
         <ul className="flex flex-col items-start space-y-4">
           <h2 className="text-lg font-semibold text-black">Features</h2>
           <li className="text-gray-600 font-medium text-sm">Vehicle Tracker</li>
@@ -47,7 +42,6 @@ const Footer: React.FC = () => {
             Dar es salaam,Tanzania
           </li>
         </ul>
-        {/* Formulário */}
         <div className="flex flex-col items-start space-y-4">
           <h4 className="text-lg font-semibold text-black">
             Get deals and discounts
